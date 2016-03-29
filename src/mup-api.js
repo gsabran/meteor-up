@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import nodemiral from 'nodemiral';
+import osHomedir from 'os-homedir';
 
 export default class MupAPI {
   constructor(base, args) {
@@ -102,6 +103,9 @@ export default class MupAPI {
       }
 
       if (info.pem) {
+        if (info.pem.startsWith('~/')) {
+          info.pem = info.pem.replace('~', osHomedir());
+        }
         auth.pem = fs.readFileSync(path.resolve(info.pem), 'utf8');
       } else if (info.password) {
         auth.password = info.password;

@@ -8,8 +8,8 @@
   },
   "scripts": {
     "prepublish": "nofat make",
-     "test": "nofat test",
-     "lint": "nofat lint"
+    "test": "nofat test",
+    "lint": "nofat lint"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "bluebird": "3.x.x",
     "debug": "2.x.x",
     "nodemiral": "1.x.x",
+    "os-homedir": "^1.0.1",
     "shelljs": "0.5.x",
     "silent-npm-registry-client": "1.x.x",
     "source-map-support": "0.4.0",
